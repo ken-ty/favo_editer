@@ -1,0 +1,32 @@
+# レスポンスをコピペして保存
+# xxは伏せ字
+
+HTTP/1.1 200 OK
+Date: Wed, 22 Sep 2021 11:17:35 GMT
+Content-Type: application/json
+Content-Length: 271
+Connection: close
+Server: nginx
+X-RateLimit-Limit: 60
+X-RateLimit-Reset: 1632309515
+X-RateLimit-Remaining: 59
+Access-Control-Allow-Origin: *
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+P3P: CP="IDC CUR ADM DEV PSA CONi OUR IND ONL UNI COM CNT STA LOC"
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+
+{
+  "id": xxx,
+  "userId": "xxxx",
+  "name": "todoggler",
+  "roleType": 1,
+  "lang": "ja",
+  "mailAddress": "xxx@gmail.com",
+  "nulabAccount": {
+    "nulabId": "xx",
+    "name": "todoggler",
+    "uniqueId": "todoggler"
+  },
+  "keyword": "xx xx"
+}

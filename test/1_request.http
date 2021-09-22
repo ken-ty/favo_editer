@@ -1,0 +1,26 @@
+# メリット1. 変数を書き換えることで、テストケースを切り替えられる。curlコマンド本体に触らなくていい。差分がわかりやすい。
+# メリット2. エビデンス格納ファイルで作業ができる。1_request.http , 1_response.http と対になる名前をつけて保存がよし。
+#            実質テキストファイルだから、テスト内容をメモしたりが柔軟。
+
+# 共通変数
+@subdomain = kentokura
+@apikey = xxxxx
+@projectkey = PRJ_KEY
+###
+
+# テストケース例： 認証ユーザー情報を取得し、idを確認。idを用いて、ユーザー情報を取得できるか。
+
+# 認証ユーザー情報の取得
+curl https://{{subdomain}}.backlog.com\
+/api/v2/users/myself\
+?apiKey={{apikey}}
+###
+
+# ユーザー情報の取得
+# ↓必要な変数はコマンドの近くに配置。見やすい！
+@userid = 上記で取得したid
+
+curl https://{{subdomain}}.backlog.com\
+/api/v2/users/{{userid}}\
+?apiKey={{apikey}}
+###
